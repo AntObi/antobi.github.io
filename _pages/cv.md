@@ -66,7 +66,7 @@ materials discovery, and scientific software.
 <div class="cv-section">
   <p class="eyebrow">Links</p>
   <div class="hero-actions">
-    <a class="portfolio-button" href="/publications/">Publications</a>
+    <a class="portfolio-button" href="{{ '/publications/' | relative_url }}">Publications</a>
     <a class="portfolio-button" href="https://github.com/AntObi">GitHub</a>
     <a class="portfolio-button" href="https://orcid.org/0000-0003-2107-153X">ORCID</a>
     <a class="portfolio-button" href="mailto:aonwuli@proton.me">Email</a>
