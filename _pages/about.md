@@ -17,8 +17,8 @@ redirect_from:
     and the infrastructure needed to turn research models into reliable scientific workflows.
   </p>
   <div class="hero-actions">
-    <a class="portfolio-button portfolio-button--primary" href="/work/">Selected work</a>
-    <a class="portfolio-button" href="/publications/">Publications</a>
+    <a class="portfolio-button portfolio-button--primary" href="{{ '/work/' | relative_url }}">Selected work</a>
+    <a class="portfolio-button" href="{{ '/publications/' | relative_url }}">Publications</a>
     <a class="portfolio-button" href="https://github.com/AntObi">GitHub</a>
   </div>
 </div>
@@ -148,7 +148,7 @@ redirect_from:
     </p>
   </div>
   <div class="hero-actions">
-    <a class="portfolio-button" href="/cv/">CV</a>
+    <a class="portfolio-button" href="{{ '/cv/' | relative_url }}">CV</a>
     <a class="portfolio-button" href="https://orcid.org/0000-0003-2107-153X">ORCID</a>
     <a class="portfolio-button" href="mailto:aonwuli@proton.me">Email</a>
   </div>
