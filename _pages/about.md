@@ -1,50 +1,155 @@
 ---
 permalink: /
-title: "academicpages is a ready-to-fork GitHub Pages template for academic personal websites"
-excerpt: "About me"
-author_profile: true
-redirect_from: 
+title: ""
+excerpt: "Anthony Onwuli — Machine Learning Scientist working on materials discovery, atomistic modelling, and scientific software."
+author_profile: false
+redirect_from:
   - /about/
   - /about.html
 ---
 
-This is the front page of a website that is powered by the [academicpages template](https://github.com/academicpages/academicpages.github.io) and hosted on GitHub pages. [GitHub pages](https://pages.github.com) is a free service in which websites are built and hosted from code and data stored in a GitHub repository, automatically updating when a new commit is made to the respository. This template was forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/) created by Michael Rose, and then extended to support the kinds of content that academics have: publications, talks, teaching, a portfolio, blog posts, and a dynamically-generated CV. You can fork [this repository](https://github.com/academicpages/academicpages.github.io) right now, modify the configuration and markdown files, add your own PDFs and other content, and have your own site for free, with no ads! An older version of this template powers my own personal website at [stuartgeiger.com](http://stuartgeiger.com), which uses [this Github repository](https://github.com/staeiou/staeiou.github.io).
+<div class="home-hero">
+  <p class="eyebrow">Machine Learning Scientist · Materials Science · Scientific Computing</p>
+  <h1>Anthony Onwuli</h1>
+  <p class="hero-lede">
+    I build machine-learning models and scientific software for materials discovery.
+    My work spans atomistic modelling, chemical representations, high-throughput simulation,
+    and the infrastructure needed to turn research models into reliable scientific workflows.
+  </p>
+  <div class="hero-actions">
+    <a class="portfolio-button portfolio-button--primary" href="{{ '/work/' | relative_url }}">Selected work</a>
+    <a class="portfolio-button" href="{{ '/publications/' | relative_url }}">Publications</a>
+    <a class="portfolio-button" href="https://github.com/AntObi">GitHub</a>
+  </div>
+</div>
 
-A data-driven personal website
-======
-Like many other Jekyll-based GitHub Pages templates, academicpages makes you separate the website's content from its form. The content & metadata of your website are in structured markdown files, while various other files constitute the theme, specifying how to transform that content & metadata into HTML pages. You keep these various markdown (.md), YAML (.yml), HTML, and CSS files in a public GitHub repository. Each time you commit and push an update to the repository, the [GitHub pages](https://pages.github.com/) service creates static HTML pages based on these files, which are hosted on GitHub's servers free of charge.
+<section class="portfolio-section">
+  <div class="section-heading">
+    <p class="eyebrow">Current focus</p>
+    <h2>Machine learning for materials discovery</h2>
+    <p>
+      I am an ML Scientist II at Materials Nexus. I work across model development,
+      atomistic simulation, data generation, evaluation, and scientific ML infrastructure.
+      The common thread is making computational materials workflows more useful, reproducible,
+      and easier to extend.
+    </p>
+  </div>
 
-Many of the features of dynamic content management systems (like Wordpress) can be achieved in this fashion, using a fraction of the computational resources and with far less vulnerability to hacking and DDoSing. You can also modify the theme to your heart's content without touching the content of your site. If you get to a point where you've broken something in Jekyll/HTML/CSS beyond repair, your markdown files describing your talks, publications, etc. are safe. You can rollback the changes or even delete the repository and start over -- just be sure to save the markdown files! Finally, you can also write scripts that process the structured data on the site, such as [this one](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb) that analyzes metadata in pages about talks to display [a map of every location you've given a talk](https://academicpages.github.io/talkmap.html).
+  <div class="portfolio-grid portfolio-grid--two">
+    <article class="portfolio-card">
+      <p class="card-kicker">Atomistic ML</p>
+      <h3>Models for atomistic simulation</h3>
+      <p>
+        Machine-learning interatomic potentials, property models, and the training/evaluation
+        systems around them. I am particularly interested in models that preserve useful physical
+        structure while remaining practical inside larger simulation workflows.
+      </p>
+    </article>
 
-Getting started
-======
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Fork [this repository](https://github.com/academicpages/academicpages.github.io) by clicking the "fork" button in the top right. 
-1. Go to the repository's settings (rightmost item in the tabs that start with "Code", should be below "Unwatch"). Rename the repository "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and create content & metadata (see below -- also see [this set of diffs](http://archive.is/3TPas) showing what files were changed to set up [an example site](https://getorg-testacct.github.io) for a user with the username "getorg-testacct")
-1. Upload any files (like PDFs, .zip files, etc.) to the files/ directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
+    <article class="portfolio-card">
+      <p class="card-kicker">Scientific systems</p>
+      <h3>Research models that survive contact with workflows</h3>
+      <p>
+        High-throughput simulation, dataset preparation, model interfaces, reproducibility,
+        and the engineering needed to connect research code to repeatable computational campaigns.
+      </p>
+    </article>
 
-Site-wide configuration
-------
-The main configuration file for the site is in the base directory in [_config.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_config.yml), which defines the content in the sidebars and other site-wide features. You will need to replace the default variables with ones about yourself and your site's github repository. The configuration file for the top menu is in [_data/navigation.yml](https://github.com/academicpages/academicpages.github.io/blob/master/_data/navigation.yml). For example, if you don't have a portfolio or blog posts, you can remove those items from that navigation.yml file to remove them from the header. 
+    <article class="portfolio-card">
+      <p class="card-kicker">Representations</p>
+      <h3>Chemical information for machine learning</h3>
+      <p>
+        My academic work studied how elements and ionic species can be represented for materials
+        informatics, including learned embeddings and their relationship to chemical similarity.
+      </p>
+    </article>
 
-Create content & metadata
-------
-For site content, there is one markdown file for each type of content, which are stored in directories like _publications, _talks, _posts, _teaching, or _pages. For example, each talk is a markdown file in the [_talks directory](https://github.com/academicpages/academicpages.github.io/tree/master/_talks). At the top of each markdown file is structured data in YAML about the talk, which the theme will parse to do lots of cool stuff. The same structured data about a talk is used to generate the list of talks on the [Talks page](https://academicpages.github.io/talks), each [individual page](https://academicpages.github.io/talks/2012-03-01-talk-1) for specific talks, the talks section for the [CV page](https://academicpages.github.io/cv), and the [map of places you've given a talk](https://academicpages.github.io/talkmap.html) (if you run this [python file](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.py) or [Jupyter notebook](https://github.com/academicpages/academicpages.github.io/blob/master/talkmap.ipynb), which creates the HTML for the map based on the contents of the _talks directory).
+    <article class="portfolio-card">
+      <p class="card-kicker">Materials design</p>
+      <h3>From chemical space to candidate materials</h3>
+      <p>
+        I have worked on high-throughput screening, chemical-space mapping, generative materials
+        models, and chemically informed constraints for navigating large candidate spaces.
+      </p>
+    </article>
+  </div>
+</section>
 
-**Markdown generator**
+<section class="portfolio-section">
+  <div class="section-heading">
+    <p class="eyebrow">Selected work</p>
+    <h2>Research and open-source software</h2>
+  </div>
 
-I have also created [a set of Jupyter notebooks](https://github.com/academicpages/academicpages.github.io/tree/master/markdown_generator
-) that converts a CSV containing structured data about talks or presentations into individual markdown files that will be properly formatted for the academicpages template. The sample CSVs in that directory are the ones I used to create my own personal website at stuartgeiger.com. My usual workflow is that I keep a spreadsheet of my publications and talks, then run the code in these notebooks to generate the markdown files, then commit and push them to the GitHub repository.
+  <div class="portfolio-grid">
+    <article class="portfolio-card portfolio-card--featured">
+      <p class="card-kicker">Open source · Python</p>
+      <h3>ElementEmbeddings</h3>
+      <p>
+        A package for working with high-dimensional representations of chemical elements and
+        ionic species, developed alongside my research on chemical representations for materials ML.
+      </p>
+      <div class="card-links">
+        <a href="https://github.com/WMD-group/ElementEmbeddings">Code</a>
+        <a href="https://zenodo.org/records/21365848">Release</a>
+        <a href="https://doi.org/10.1039/D3DD00121K">Paper</a>
+      </div>
+    </article>
 
-How to edit your site's GitHub repository
-------
-Many people use a git client to create files on their local computer and then push them to GitHub's servers. If you are not familiar with git, you can directly edit these configuration and markdown files directly in the github.com interface. Navigate to a file (like [this one](https://github.com/academicpages/academicpages.github.io/blob/master/_talks/2012-03-01-talk-1.md) and click the pencil icon in the top right of the content preview (to the right of the "Raw | Blame | History" buttons). You can delete a file by clicking the trashcan icon to the right of the pencil icon. You can also create new files or upload files by navigating to a directory and clicking the "Create new file" or "Upload files" buttons. 
+    <article class="portfolio-card portfolio-card--featured">
+      <p class="card-kicker">Open source · Materials informatics</p>
+      <h3>SMACT</h3>
+      <p>
+        Rapid chemical screening and informatics tools for computational materials design.
+        I contribute to the project and its modernisation as an open-source research codebase.
+      </p>
+      <div class="card-links">
+        <a href="https://github.com/WMD-group/SMACT">Code</a>
+        <a href="https://zenodo.org/records/22941452">SMACT v4</a>
+      </div>
+    </article>
 
-Example: editing a markdown file for a talk
-![Editing a markdown file for a talk](/images/editing-talk.png)
+    <article class="portfolio-card">
+      <p class="card-kicker">Generative materials design</p>
+      <h3>Exploration of crystal chemical space</h3>
+      <p>
+        Work on mapping inorganic chemical space and text-guided generative AI for crystal
+        structure generation.
+      </p>
+      <div class="card-links">
+        <a href="https://doi.org/10.1038/s41467-025-59636-y">Nature Communications</a>
+        <a href="https://doi.org/10.1039/D4FD00063C">Faraday Discussions</a>
+      </div>
+    </article>
 
-For more info
-------
-More info about configuring academicpages can be found in [the guide](https://academicpages.github.io/markdown/). The [guides for the Minimal Mistakes theme](https://mmistakes.github.io/minimal-mistakes/docs/configuration/) (which this theme was forked from) might also be helpful.
+    <article class="portfolio-card">
+      <p class="card-kicker">PhD research</p>
+      <h3>Rapid computational screening for energy materials</h3>
+      <p>
+        My PhD combined high-throughput first-principles calculations, chemical screening,
+        and materials informatics for solid-state energy-storage materials.
+      </p>
+      <div class="card-links">
+        <a href="https://spiral.imperial.ac.uk/entities/publication/54dc546d-71cc-42f1-856c-83991809f017">Thesis</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="portfolio-section portfolio-section--compact">
+  <div class="section-heading">
+    <p class="eyebrow">Background</p>
+    <h2>Materials science, machine learning, and research software</h2>
+    <p>
+      Before moving into industrial scientific ML, I completed a PhD in Materials Research at
+      Imperial College London and was an EPSRC Doctoral Prize Fellow in the Walsh Materials Design group.
+      I still maintain open-source materials software and collaborate on research where it overlaps
+      with materials informatics and generative modelling.
+    </p>
+  </div>
+  <div class="hero-actions">
+    <a class="portfolio-button" href="{{ '/cv/' | relative_url }}">CV</a>
+    <a class="portfolio-button" href="https://orcid.org/0000-0003-2107-153X">ORCID</a>
+    <a class="portfolio-button" href="mailto:aonwuli@proton.me">Email</a>
+  </div>
+</section>
