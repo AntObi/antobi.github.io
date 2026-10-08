@@ -6,72 +6,6 @@ export const socials = [
   { label: 'Email', href: 'mailto:aonwuli@proton.me' }
 ];
 
-export const recentWork = [
-  {
-    name: 'ElementEmbeddings',
-    year: '2023',
-    kind: 'Open source · representation learning',
-    description:
-      'Tools for analysing and comparing high-dimensional representations of chemical elements and ionic species.',
-    href: 'https://github.com/WMD-group/ElementEmbeddings',
-    links: [
-      { label: 'Code', href: 'https://github.com/WMD-group/ElementEmbeddings' },
-      { label: 'Paper', href: 'https://doi.org/10.1039/D3DD00121K' },
-      { label: 'Release', href: 'https://zenodo.org/records/21365848' }
-    ]
-  },
-  {
-    name: 'Ionic species representations',
-    year: '2024',
-    kind: 'Research · materials informatics',
-    description:
-      'Representation learning for charged chemical species and its use in materials informatics.',
-    href: 'https://doi.org/10.1063/5.0227009',
-    links: [{ label: 'Paper', href: 'https://doi.org/10.1063/5.0227009' }]
-  },
-  {
-    name: 'Mapping inorganic crystal chemical space',
-    year: '2025',
-    kind: 'Research · chemical space',
-    description:
-      'Mapping large inorganic composition spaces using learned chemical representations.',
-    href: 'https://doi.org/10.1039/D4FD00063C',
-    links: [{ label: 'Paper', href: 'https://doi.org/10.1039/D4FD00063C' }]
-  },
-  {
-    name: 'Text-guided crystal generation',
-    year: '2025',
-    kind: 'Research · generative materials',
-    description:
-      'Exploration of crystal chemical space using text-guided generative artificial intelligence.',
-    href: 'https://doi.org/10.1038/s41467-025-59636-y',
-    links: [{ label: 'Paper', href: 'https://doi.org/10.1038/s41467-025-59636-y' }]
-  },
-  {
-    name: 'Chemical filters for high-throughput materials design',
-    year: '2026',
-    kind: 'Research · materials screening',
-    description:
-      'Chemistry-aware constraints for ultra-high-throughput screening and generation.',
-    href: 'https://arxiv.org/abs/2607.17910',
-    links: [{ label: 'Preprint', href: 'https://arxiv.org/abs/2607.17910' }]
-  },
-  {
-    name: 'PhD thesis',
-    year: '2024',
-    kind: 'Thesis · computational materials',
-    description:
-      'Rapid computational screening of materials for energy storage applications.',
-    href: 'https://spiral.imperial.ac.uk/entities/publication/54dc546d-71cc-42f1-856c-83991809f017',
-    links: [
-      {
-        label: 'Thesis',
-        href: 'https://spiral.imperial.ac.uk/entities/publication/54dc546d-71cc-42f1-856c-83991809f017'
-      }
-    ]
-  }
-];
-
 export const projects = [
   {
     name: 'SMACT',
@@ -192,42 +126,68 @@ export const packagingContributions = [
 
 export const publications = [
   {
+    date: '2026-07-20',
     year: 2026,
     title: 'Chemical filters for ultra-high-throughput materials screening and generation',
     authors:
       'Kinga O. Mastej, Panyalak Detrattanawichai, Hyunsoo Park, Anthony Onwuli, Masahiro Negishi, Aron Walsh',
-    venue: 'arXiv:2607.17910',
+    venue: 'arXiv preprint arXiv:2607.17910',
+    type: 'Preprint',
     href: 'https://arxiv.org/abs/2607.17910'
   },
   {
+    date: '2025-06-01',
+    year: 2025,
+    title: 'Bayesian Optimization Hackathon for Chemistry and Materials',
+    authors: 'Sterling G. Baird et al., including Anthony Onwuli',
+    venue: 'ChemRxiv',
+    type: 'Preprint',
+    href: 'https://doi.org/10.26434/chemrxiv-2025-dzh5z'
+  },
+  {
+    date: '2025-05-12',
     year: 2025,
     title: 'Exploration of crystal chemical space using text-guided generative artificial intelligence',
     authors: 'Hyunsoo Park, Anthony Onwuli, Aron Walsh',
-    venue: 'Nature Communications 16',
+    venue: 'Nature Communications 16, 4379',
+    type: 'Article',
     href: 'https://doi.org/10.1038/s41467-025-59636-y'
   },
   {
+    date: '2025-01-14',
     year: 2025,
     title: 'Mapping inorganic crystal chemical space',
     authors: 'Hyunsoo Park, Anthony Onwuli, Keith T. Butler, Aron Walsh',
     venue: 'Faraday Discussions 256, 601–613',
+    type: 'Article',
     href: 'https://doi.org/10.1039/D4FD00063C'
   },
   {
+    date: '2024-09-19',
     year: 2024,
     title: 'Ionic species representations for materials informatics',
     authors: 'Anthony Onwuli, Keith T. Butler, Aron Walsh',
     venue: 'APL Machine Learning 2(3)',
+    type: 'Article',
     href: 'https://doi.org/10.1063/5.0227009'
   },
   {
+    date: '2023-09-12',
     year: 2023,
     title: 'Element similarity in high-dimensional materials representations',
     authors: 'Anthony Onwuli, Ashish V. Hegde, Kevin V. T. Nguyen, Keith T. Butler, Aron Walsh',
-    venue: 'Digital Discovery 2, 1558',
+    venue: 'Digital Discovery 2, 1558–1564',
+    type: 'Article',
     href: 'https://doi.org/10.1039/D3DD00121K'
   }
 ];
+
+export const thesis = {
+  year: 2024,
+  title: 'Rapid computational screening of materials for energy storage applications',
+  institution: 'Imperial College London',
+  href: 'https://spiral.imperial.ac.uk/entities/publication/54dc546d-71cc-42f1-856c-83991809f017'
+};
 
 export const experience = [
   {
