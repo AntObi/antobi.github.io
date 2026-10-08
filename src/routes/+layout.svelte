@@ -36,8 +36,5 @@
 </main>
 
 <footer class="site-footer">
-  <p>
-    Anthony Onwuli ·
-    <a href="https://github.com/AntObi/antobi.github.io">source</a>
-  </p>
+  <p>Anthony Onwuli</p>
 </footer>
