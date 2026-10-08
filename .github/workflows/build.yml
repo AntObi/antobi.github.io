@@ -1,44 +1,29 @@
-name: Build site
+name: Validate site
 
 on:
   pull_request:
-    branches:
-      - master
+    branches: [master]
   push:
-    branches:
-      - master
+    branches: [master]
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: site-build-${{ github.ref }}
+  group: site-validation-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
-  build:
-    name: Jekyll build
+  validate:
+    name: SvelteKit check and build
     runs-on: ubuntu-latest
     timeout-minutes: 10
-
-    env:
-      JEKYLL_ENV: production
-
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Set up Ruby
-        uses: ruby/setup-ruby@v1
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          ruby-version: "3.1"
-
-      - name: Install dependencies
-        run: |
-          gem install bundler
-          bundle config set path vendor/bundle
-          bundle install --jobs 4 --retry 3
-
-      - name: Build site
-        run: bundle exec jekyll build --trace
+          node-version: "24"
+      - run: npm install --no-audit --no-fund
+      - run: npm run check
+      - run: npm run build
