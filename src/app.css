@@ -12,7 +12,7 @@
   --accent-soft: light-dark(#ead7ca, #35241f);
   --cool: light-dark(#365e68, #8fbac1);
   --shadow: light-dark(rgba(52, 42, 35, 0.12), rgba(0, 0, 0, 0.32));
-  --max-width: 1120px;
+  --max-width: 960px;
   --radius: 14px;
 }
 
@@ -147,7 +147,7 @@ main {
 }
 
 .hero-intro {
-  max-width: 680px;
+  max-width: 600px;
   margin: 1rem 0 0;
   color: var(--muted);
   font-size: 1.08rem;
@@ -587,5 +587,70 @@ a.pill:hover {
   .card {
     break-inside: avoid;
     box-shadow: none;
+  }
+}
+
+
+.contribution-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.contribution-stat {
+  color: var(--accent-strong);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.contribution-stat:hover {
+  color: var(--accent);
+}
+
+.opensource-section,
+.upstream-section {
+  margin: 3rem 0 4.5rem;
+}
+
+.upstream-list {
+  border-top: 1px solid var(--line);
+}
+
+.upstream-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.upstream-item h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.upstream-item h3 a {
+  color: var(--text);
+}
+
+.upstream-item p {
+  max-width: 610px;
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.section-heading--compact {
+  margin-top: 0;
+}
+
+@media (max-width: 680px) {
+  .upstream-item {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
   }
 }
