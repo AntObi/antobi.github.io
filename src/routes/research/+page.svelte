@@ -1,6 +1,8 @@
 <script>
   import { publications, recentWork } from '#lib/data.js';
-  const researchWork = recentWork.filter((item) => item.kind.startsWith('Research') || item.kind.startsWith('Thesis'));
+  const researchWork = recentWork
+    .filter((item) => item.kind.startsWith('Research') || item.kind.startsWith('Thesis'))
+    .sort((a, b) => Number(b.year) - Number(a.year));
 </script>
 
 <svelte:head>
