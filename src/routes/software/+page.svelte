@@ -16,16 +16,15 @@
 </script>
 
 <svelte:head>
-  <title>Software · Anthony Onwuli</title>
+  <title>Open Source · Anthony Onwuli</title>
   <meta name="description" content="Open-source scientific software by Anthony Onwuli." />
 </svelte:head>
 
 <header class="page-header">
-  <p class="eyebrow">Software</p>
-  <h1>Open-source materials software</h1>
+  <p class="eyebrow">Open source</p>
+  <h1>Scientific software in the open</h1>
   <p class="page-lede">
-    Public tools I develop or contribute to for materials informatics, representation learning and
-    computational materials design.
+    Public tools I develop or contribute to for materials informatics, chemical screening, representation learning and computational materials design.
   </p>
 </header>
 
