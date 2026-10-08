@@ -1,6 +1,6 @@
 <script>
   import '../app.css';
-  import { base } from '$app/paths';
+  import { resolve } from '$app/paths';
 </script>
 
 <svelte:head>
@@ -20,12 +20,12 @@
 
 <header class="site-header">
   <nav class="site-nav" aria-label="Primary navigation">
-    <a class="brand" href={`${base}/`}>Anthony Onwuli</a>
+    <a class="brand" href={resolve('/')}>Anthony Onwuli</a>
     <div class="nav-links">
-      <a href={`${base}/research/`}>Research</a>
-      <a href={`${base}/software/`}>Software</a>
-      <a href={`${base}/writing/`}>Writing</a>
-      <a href={`${base}/cv/`}>CV</a>
+      <a href={resolve('/research')}>Research</a>
+      <a href={resolve('/software')}>Software</a>
+      <a href={resolve('/writing')}>Writing</a>
+      <a href={resolve('/cv')}>CV</a>
     </div>
   </nav>
 </header>

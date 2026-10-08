@@ -55,7 +55,26 @@ export const trailingSlash = 'always';
 
 That is why this site works well on GitHub Pages: there is no Node server in production.
 
-## 4. Components
+## 4. Configuration in SvelteKit 3
+
+SvelteKit 3 moved project configuration into the SvelteKit Vite plugin.
+
+In `vite.config.js`:
+
+```js
+sveltekit({
+  adapter: adapter({ pages: 'build', assets: 'build' }),
+  paths: {
+    base: process.env.BASE_PATH ?? ''
+  }
+})
+```
+
+The adapter controls how the app is emitted for hosting. `adapter-static` writes ordinary static files.
+
+The dynamic `paths.base` value is what lets the same source build at the production root and under a PR-preview subdirectory.
+
+## 5. Components
 
 Reusable UI lives in `src/lib/components/`.
 
@@ -78,7 +97,7 @@ A parent can then render:
 <ProjectCard project={project} />
 ```
 
-## 5. Reactive state
+## 6. Reactive state
 
 The software page is the main interactive example.
 
@@ -96,7 +115,7 @@ let filteredProjects = $derived(
 
 When the search box changes, Svelte updates only the affected project list.
 
-## 6. Structured content
+## 7. Structured content
 
 `src/lib/data.js` is the source of truth for publications, projects, CV entries and homepage work.
 
@@ -104,19 +123,16 @@ That prevents the same publication or project from being retyped in several page
 
 As the site grows, this can be split into YAML/JSON files or generated from APIs, but keeping it as plain JavaScript makes the first migration easy to understand.
 
-## 7. Static assets and preview paths
+## 8. Internal routes and static assets
 
-`static/` is copied directly into the final site. The profile image therefore becomes `/profile.png`.
+SvelteKit 3 provides helpers in `$app/paths`.
 
-The site imports `base` from `$app/paths` when linking to internal routes or static files. This matters for pull-request previews, which live under paths such as:
+- `resolve('/software')` generates an internal route with the configured base path.
+- `asset('profile.png')` generates the correct URL for a file in `static/`.
 
-```text
-/pr-preview/pr-2/
-```
+These helpers are why a PR preview under `/pr-preview/pr-2/` does not accidentally link back to the production root.
 
-The same source code therefore works both at the production root and under a preview subdirectory.
-
-## 8. Build lifecycle
+## 9. Build lifecycle
 
 Local development:
 
@@ -138,7 +154,7 @@ npm run build
 
 The adapter writes the final site into `build/`.
 
-## 9. Good next exercises
+## 10. Good next exercises
 
 1. Add a project to `src/lib/data.js`.
 2. Change `ProjectCard.svelte` and see every card update.

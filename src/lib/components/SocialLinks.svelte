@@ -1,8 +1,8 @@
 <script>
-  import { base } from '$app/paths';
+  import { resolve } from '$app/paths';
   import { socials } from '$lib/data.js';
 
-  const hrefFor = (href) => (href.startsWith('/') ? `${base}${href}` : href);
+  const hrefFor = (href) => (href.startsWith('/') ? resolve(href) : href);
 </script>
 
 <nav class="social-links" aria-label="Profile links">

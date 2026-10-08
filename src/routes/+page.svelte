@@ -1,5 +1,5 @@
 <script>
-  import { base } from '$app/paths';
+  import { asset, resolve } from '$app/paths';
   import ProjectCard from '$lib/components/ProjectCard.svelte';
   import SocialLinks from '$lib/components/SocialLinks.svelte';
   import { projects, recentWork, writingTopics } from '$lib/data.js';
@@ -11,7 +11,7 @@
 </svelte:head>
 
 <section class="profile-hero">
-  <img class="profile-photo" src={`${base}/profile.png`} alt="Anthony Onwuli" width="176" height="176" />
+  <img class="profile-photo" src={asset('profile.png')} alt="Anthony Onwuli" width="176" height="176" />
   <h1>Anthony Onwuli</h1>
   <SocialLinks />
   <p class="intro">
@@ -44,7 +44,7 @@
       <ProjectCard {project} />
     {/each}
   </div>
-  <p class="section-link"><a href={`${base}/software/`}>Explore software →</a></p>
+  <p class="section-link"><a href={resolve('/software')}>Explore software →</a></p>
 </section>
 
 <section class="section">
@@ -64,5 +64,5 @@
       </article>
     {/each}
   </div>
-  <p class="section-link"><a href={`${base}/writing/`}>Writing and notes →</a></p>
+  <p class="section-link"><a href={resolve('/writing')}>Writing and notes →</a></p>
 </section>
