@@ -39,4 +39,5 @@ jobs:
           action: auto
           comment: true
           qr-code: false
+          pages-base-url: https://antobi.github.io
           wait-for-pages-deployment: false
