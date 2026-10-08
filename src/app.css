@@ -654,3 +654,43 @@ a.pill:hover {
     gap: 0.7rem;
   }
 }
+
+
+.packaging-section {
+  margin: 3rem 0 4.5rem;
+}
+
+.packaging-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.packaging-item {
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+}
+
+.packaging-item h3 {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.packaging-item h3 a {
+  color: var(--text);
+}
+
+.packaging-item p {
+  margin: 0.45rem 0 0.85rem;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 760px) {
+  .packaging-grid {
+    grid-template-columns: 1fr;
+  }
+}
