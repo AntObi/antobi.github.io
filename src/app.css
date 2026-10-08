@@ -694,3 +694,38 @@ a.pill:hover {
     grid-template-columns: 1fr;
   }
 }
+
+
+.publication-card {
+  display: grid;
+  grid-template-rows: auto auto auto 1fr auto;
+  gap: 0.65rem;
+}
+
+.publication-card h3 {
+  margin: 0;
+}
+
+.publication-venue-card {
+  margin: 0;
+  color: var(--cool);
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.thesis-section {
+  max-width: 720px;
+}
+
+.thesis-section h2 {
+  margin-top: 0.35rem;
+  font-size: 1.65rem;
+}
+
+.thesis-section h2 a {
+  color: var(--text);
+}
+
+.thesis-section p:last-child {
+  color: var(--muted);
+}
