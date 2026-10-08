@@ -2,9 +2,9 @@
   import { resolve } from '$app/paths';
   import ProjectCard from '#lib/components/ProjectCard.svelte';
   import SocialLinks from '#lib/components/SocialLinks.svelte';
-  import { projects, recentWork } from '#lib/data.js';
+  import { projects, publications } from '#lib/data.js';
 
-  const recentWorkByYear = [...recentWork].sort((a, b) => Number(b.year) - Number(a.year));
+  const publicationsNewestFirst = [...publications].sort((a, b) => b.date.localeCompare(a.date));
 </script>
 
 <svelte:head>
@@ -47,20 +47,28 @@
   <div class="section-heading">
     <div>
       <p class="section-index">01</p>
-      <p class="eyebrow">Selected research</p>
+      <p class="eyebrow">Research</p>
     </div>
     <div>
       <h2>Recent work</h2>
       <p>
-        Publications and research outputs spanning chemical representations,
-        generative materials design and high-throughput computational screening.
+        Publications spanning chemical representations, generative materials design,
+        Bayesian optimisation and high-throughput computational screening.
       </p>
     </div>
   </div>
 
   <div class="card-grid research-grid">
-    {#each recentWorkByYear as project}
-      <ProjectCard {project} />
+    {#each publicationsNewestFirst as paper}
+      <article class="card publication-card">
+        <p class="eyebrow">{paper.year} · {paper.type}</p>
+        <h3><a href={paper.href}>{paper.title}</a></h3>
+        <p class="publication-venue-card">{paper.venue}</p>
+        <p class="card-description">{paper.authors}</p>
+        <div class="link-row">
+          <a class="pill" href={paper.href}>{paper.type}</a>
+        </div>
+      </article>
     {/each}
   </div>
 
