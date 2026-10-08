@@ -74,22 +74,64 @@ export const recentWork = [
 
 export const projects = [
   {
-    name: 'ElementEmbeddings',
-    repo: 'WMD-group/ElementEmbeddings',
-    href: 'https://github.com/WMD-group/ElementEmbeddings',
-    role: 'Developer',
-    description:
-      'Python tooling for comparing, visualising and analysing representations of chemical elements and ionic species.',
-    tags: ['Materials informatics', 'Representation learning', 'Python']
-  },
-  {
     name: 'SMACT',
     repo: 'WMD-group/SMACT',
     href: 'https://github.com/WMD-group/SMACT',
+    role: 'Maintainer',
+    description:
+      'Chemistry-aware screening and materials-informatics tools for computational materials design.',
+    tags: ['Materials discovery', 'Chemical screening', 'Python'],
+    contributions: [
+      { label: '316 commits', href: 'https://github.com/WMD-group/SMACT/commits/master/?author=AntObi' },
+      { label: '111 PRs', href: 'https://github.com/WMD-group/SMACT/pulls?q=is%3Apr+author%3AAntObi' }
+    ]
+  },
+  {
+    name: 'ElementEmbeddings',
+    repo: 'WMD-group/ElementEmbeddings',
+    href: 'https://github.com/WMD-group/ElementEmbeddings',
+    role: 'Author · maintainer',
+    description:
+      'Tools for analysing, comparing and visualising high-dimensional representations of chemical elements and ionic species.',
+    tags: ['Materials informatics', 'Representation learning', 'Python'],
+    contributions: [
+      { label: '146 commits', href: 'https://github.com/WMD-group/ElementEmbeddings/commits/main/?author=AntObi' },
+      { label: '58 PRs', href: 'https://github.com/WMD-group/ElementEmbeddings/pulls?q=is%3Apr+author%3AAntObi' }
+    ]
+  },
+  {
+    name: 'SkipSpecies',
+    repo: 'WMD-group/skipspecies',
+    href: 'https://github.com/WMD-group/skipspecies',
     role: 'Contributor',
     description:
-      'Open-source chemistry-aware screening and informatics tools for computational materials design.',
-    tags: ['Materials discovery', 'Chemical screening', 'Python']
+      'Distributed representations of ionic species for learning chemical similarity from materials data.',
+    tags: ['Representation learning', 'Ionic species', 'Python'],
+    contributions: [
+      { label: '13 commits', href: 'https://github.com/WMD-group/skipspecies/commits/main/?author=AntObi' },
+      { label: '7 PRs', href: 'https://github.com/WMD-group/skipspecies/pulls?q=is%3Apr+author%3AAntObi' }
+    ]
+  }
+];
+
+export const upstreamContributions = [
+  {
+    name: 'pymatgen',
+    href: 'https://github.com/materialsproject/pymatgen',
+    description: 'Materials analysis toolkit used throughout the computational materials ecosystem.',
+    contributions: [
+      { label: '3 commits', href: 'https://github.com/materialsproject/pymatgen/commits/master/?author=AntObi' },
+      { label: '3 PRs', href: 'https://github.com/materialsproject/pymatgen/pulls?q=is%3Apr+author%3AAntObi' }
+    ]
+  },
+  {
+    name: 'Metatrain',
+    href: 'https://github.com/metatensor/metatrain',
+    description: 'Training and manipulation of machine-learning models for atomistic systems.',
+    contributions: [
+      { label: '2 commits', href: 'https://github.com/metatensor/metatrain/commits/main/?author=AntObi' },
+      { label: '2 PRs', href: 'https://github.com/metatensor/metatrain/pulls?q=is%3Apr+author%3AAntObi' }
+    ]
   }
 ];
 
