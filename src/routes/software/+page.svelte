@@ -1,6 +1,6 @@
 <script>
   import ProjectCard from '#lib/components/ProjectCard.svelte';
-  import { projects, upstreamContributions } from '#lib/data.js';
+  import { packagingContributions, projects, upstreamContributions } from '#lib/data.js';
 
   let query = $state('');
   let activeTag = $state('All');
@@ -25,7 +25,7 @@
   <h1>Scientific software in the open</h1>
   <p class="page-lede">
     Projects where I have sustained development or maintenance responsibility, followed by selected
-    upstream contributions to software I use in computational materials science and atomistic ML.
+    upstream contributions and packaging work across the scientific Python ecosystem.
   </p>
 </header>
 
@@ -62,8 +62,9 @@
     <div>
       <h2>Selected contributions</h2>
       <p>
-        Smaller but substantive contributions to established projects. These are deliberately separated
-        from software where I have sustained ownership or maintenance responsibility.
+        Technical contributions to established projects that I use in computational materials science
+        and atomistic machine learning. These are kept separate from software where I have sustained
+        ownership or maintenance responsibility.
       </p>
     </div>
   </div>
@@ -75,6 +76,35 @@
           <h3><a href={project.href}>{project.name}</a></h3>
           <p>{project.description}</p>
         </div>
+        <div class="contribution-row">
+          {#each project.contributions as contribution}
+            <a class="contribution-stat" href={contribution.href}>{contribution.label}</a>
+          {/each}
+        </div>
+      </article>
+    {/each}
+  </div>
+</section>
+
+<section class="packaging-section">
+  <div class="section-heading section-heading--compact">
+    <div>
+      <p class="section-index">04</p>
+      <p class="eyebrow">Packaging</p>
+    </div>
+    <div>
+      <h2>Release & ecosystem maintenance</h2>
+      <p>
+        Conda-forge packaging, feedstock maintenance and release work for scientific software.
+      </p>
+    </div>
+  </div>
+
+  <div class="packaging-grid">
+    {#each packagingContributions as project}
+      <article class="packaging-item">
+        <h3><a href={project.href}>{project.name}</a></h3>
+        <p>{project.description}</p>
         <div class="contribution-row">
           {#each project.contributions as contribution}
             <a class="contribution-stat" href={contribution.href}>{contribution.label}</a>
