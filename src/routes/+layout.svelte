@@ -16,17 +16,16 @@
     property="og:description"
     content="Machine learning scientist working on atomistic modelling, materials discovery and scientific software."
   />
-  <meta property="og:image" content="https://antobi.github.io/profile.png" />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/30937913?v=4" />
   <meta name="twitter:card" content="summary" />
 </svelte:head>
 
 <header class="site-header">
   <nav class="site-nav" aria-label="Primary navigation">
-    <a class="brand" href={resolve('/')}>Anthony Onwuli</a>
+    <a class="brand" href={resolve('/')}>AO</a>
     <div class="nav-links">
       <a href={resolve('/research')}>Research</a>
-      <a href={resolve('/software')}>Software</a>
-      <a href={resolve('/writing')}>Writing</a>
+      <a href={resolve('/software')}>Open Source</a>
       <a href={resolve('/cv')}>CV</a>
     </div>
   </nav>
@@ -38,7 +37,7 @@
 
 <footer class="site-footer">
   <p>
-    Built with SvelteKit ·
-    <a href="https://github.com/AntObi/antobi.github.io">source on GitHub</a>
+    Anthony Onwuli ·
+    <a href="https://github.com/AntObi/antobi.github.io">source</a>
   </p>
 </footer>
