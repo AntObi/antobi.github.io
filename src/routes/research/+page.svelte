@@ -1,8 +1,7 @@
 <script>
-  import { publications, recentWork } from '#lib/data.js';
-  const researchWork = recentWork
-    .filter((item) => item.kind.startsWith('Research') || item.kind.startsWith('Thesis'))
-    .sort((a, b) => Number(b.year) - Number(a.year));
+  import { publications, thesis } from '#lib/data.js';
+
+  const publicationsNewestFirst = [...publications].sort((a, b) => b.date.localeCompare(a.date));
 </script>
 
 <svelte:head>
@@ -21,35 +20,23 @@
 </header>
 
 <section class="section">
-  <h2>Selected research</h2>
-  <div class="card-grid">
-    {#each researchWork as item}
-      <article class="card">
-        <p class="eyebrow">{item.year}</p>
-        <h3><a href={item.href}>{item.name}</a></h3>
-        <p>{item.description}</p>
-        <div class="link-row">
-          {#each item.links as link}
-            <a class="pill" href={link.href}>{link.label}</a>
-          {/each}
+  <h2>Publications</h2>
+  <div class="publication-list">
+    {#each publicationsNewestFirst as paper}
+      <article class="publication">
+        <p class="publication-year">{paper.year}</p>
+        <div>
+          <h3><a href={paper.href}>{paper.title}</a></h3>
+          <p>{paper.authors}</p>
+          <p class="muted">{paper.venue} · {paper.type}</p>
         </div>
       </article>
     {/each}
   </div>
 </section>
 
-<section class="section">
-  <h2>Publications</h2>
-  <div class="publication-list">
-    {#each publications as paper}
-      <article class="publication">
-        <p class="publication-year">{paper.year}</p>
-        <div>
-          <h3><a href={paper.href}>{paper.title}</a></h3>
-          <p>{paper.authors}</p>
-          <p class="muted">{paper.venue}</p>
-        </div>
-      </article>
-    {/each}
-  </div>
+<section class="section thesis-section">
+  <p class="eyebrow">Thesis</p>
+  <h2><a href={thesis.href}>{thesis.title}</a></h2>
+  <p>{thesis.institution} · {thesis.year}</p>
 </section>
