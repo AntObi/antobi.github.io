@@ -1,22 +1,38 @@
-# Anthony Onwuli — personal site
+# antobi.github.io
 
-Source for https://antobi.github.io.
+Personal site for Anthony Onwuli.
 
-The site is a compact professional portfolio focused on machine learning for materials,
-atomistic modelling, scientific computing, open-source research software, and publications.
+This version is built with **SvelteKit** and prerendered as a fully static site for GitHub Pages. The design takes inspiration from technical research sites such as janosh.dev while keeping the content and visual identity specific to Anthony's work in atomistic machine learning, materials discovery and scientific software.
 
 ## Local development
 
-This repository uses Jekyll and the Academic Pages / Minimal Mistakes base theme.
+```bash
+npm install
+npm run dev
+```
 
-    bundle install
-    bundle exec jekyll serve
+Then open the local URL printed by Vite.
 
-Content is primarily maintained in:
+## Validation
 
-- `_pages/about.md` — homepage
-- `_pages/work.md` — selected work
-- `_pages/publications.md` — publications and thesis
-- `_pages/cv.md` — concise public CV
-- `_data/navigation.yml` — top navigation
-- `assets/css/main.scss` — site-specific styling
+```bash
+npm run check
+npm run build
+```
+
+The production build is written to `build/`.
+
+## Repository structure
+
+- `src/routes/` — pages. The directory structure becomes the URL structure.
+- `src/lib/` — reusable components and structured site data.
+- `src/app.css` — global design tokens and shared styles.
+- `static/` — files copied directly into the built site.
+- `.github/workflows/` — validation, PR previews and GitHub Pages deployment.
+- `docs/sveltekit-walkthrough.md` — guided explanation of how the site works.
+
+## Deployment
+
+Pull requests are validated automatically and branches in this repository receive a preview under `/pr-preview/pr-<number>/`.
+
+Merges to `master` build and publish the static output to `gh-pages`.
