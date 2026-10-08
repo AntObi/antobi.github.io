@@ -1,6 +1,6 @@
 <script>
   import ProjectCard from '#lib/components/ProjectCard.svelte';
-  import { projects } from '#lib/data.js';
+  import { projects, upstreamContributions } from '#lib/data.js';
 
   let query = $state('');
   let activeTag = $state('All');
@@ -24,28 +24,63 @@
   <p class="eyebrow">Open source</p>
   <h1>Scientific software in the open</h1>
   <p class="page-lede">
-    Public tools I develop or contribute to for materials informatics, chemical screening, representation learning and computational materials design.
+    Projects where I have sustained development or maintenance responsibility, followed by selected
+    upstream contributions to software I use in computational materials science and atomistic ML.
   </p>
 </header>
 
-<div class="project-controls">
-  <label>
-    <span class="sr-only">Search software</span>
-    <input bind:value={query} placeholder="Search projects..." />
-  </label>
-  <div class="filter-row" aria-label="Filter projects by topic">
-    {#each tags as tag}
-      <button class:active={activeTag === tag} onclick={() => (activeTag = tag)}>{tag}</button>
+<section class="opensource-section">
+  <div class="project-controls">
+    <label>
+      <span class="sr-only">Search software</span>
+      <input bind:value={query} placeholder="Search projects..." />
+    </label>
+    <div class="filter-row" aria-label="Filter projects by topic">
+      {#each tags as tag}
+        <button class:active={activeTag === tag} onclick={() => (activeTag = tag)}>{tag}</button>
+      {/each}
+    </div>
+  </div>
+
+  <div class="card-grid opensource-grid">
+    {#each filteredProjects as project (project.name)}
+      <ProjectCard {project} />
     {/each}
   </div>
-</div>
 
-<div class="card-grid">
-  {#each filteredProjects as project (project.name)}
-    <ProjectCard {project} />
-  {/each}
-</div>
+  {#if filteredProjects.length === 0}
+    <p class="empty-state">No projects match that search.</p>
+  {/if}
+</section>
 
-{#if filteredProjects.length === 0}
-  <p class="empty-state">No projects match that search.</p>
-{/if}
+<section class="upstream-section">
+  <div class="section-heading section-heading--compact">
+    <div>
+      <p class="section-index">03</p>
+      <p class="eyebrow">Upstream</p>
+    </div>
+    <div>
+      <h2>Selected contributions</h2>
+      <p>
+        Smaller but substantive contributions to established projects. These are deliberately separated
+        from software where I have sustained ownership or maintenance responsibility.
+      </p>
+    </div>
+  </div>
+
+  <div class="upstream-list">
+    {#each upstreamContributions as project}
+      <article class="upstream-item">
+        <div>
+          <h3><a href={project.href}>{project.name}</a></h3>
+          <p>{project.description}</p>
+        </div>
+        <div class="contribution-row">
+          {#each project.contributions as contribution}
+            <a class="contribution-stat" href={contribution.href}>{contribution.label}</a>
+          {/each}
+        </div>
+      </article>
+    {/each}
+  </div>
+</section>
