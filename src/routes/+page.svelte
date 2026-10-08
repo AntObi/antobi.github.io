@@ -3,6 +3,8 @@
   import ProjectCard from '#lib/components/ProjectCard.svelte';
   import SocialLinks from '#lib/components/SocialLinks.svelte';
   import { projects, recentWork } from '#lib/data.js';
+
+  const recentWorkByYear = [...recentWork].sort((a, b) => Number(b.year) - Number(a.year));
 </script>
 
 <svelte:head>
@@ -57,7 +59,7 @@
   </div>
 
   <div class="card-grid research-grid">
-    {#each recentWork as project}
+    {#each recentWorkByYear as project}
       <ProjectCard {project} />
     {/each}
   </div>
