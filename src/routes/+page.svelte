@@ -1,8 +1,8 @@
 <script>
-  import { asset, resolve } from '$app/paths';
+  import { resolve } from '$app/paths';
   import ProjectCard from '#lib/components/ProjectCard.svelte';
   import SocialLinks from '#lib/components/SocialLinks.svelte';
-  import { projects, recentWork, writingTopics } from '#lib/data.js';
+  import { projects, recentWork } from '#lib/data.js';
 </script>
 
 <svelte:head>
@@ -10,59 +10,81 @@
   <meta property="og:title" content="Anthony Onwuli · Machine Learning Scientist" />
 </svelte:head>
 
-<section class="profile-hero">
-  <img class="profile-photo" src={asset('profile.png')} alt="Anthony Onwuli" width="176" height="176" />
-  <h1>Anthony Onwuli</h1>
-  <SocialLinks />
-  <p class="intro">
-    <strong>Machine Learning Scientist</strong> working on atomistic machine learning,
-    materials discovery and scientific computing. I build models and scientific software that connect
-    materials data, atomistic simulation and high-throughput computational workflows.
-  </p>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="hero-kicker">Materials × machine learning</p>
+    <h1>Anthony Onwuli</h1>
+    <p class="hero-role">Machine Learning Scientist II · Materials Nexus</p>
+    <p class="hero-intro">
+      I work on atomistic machine learning, materials discovery and scientific computing.
+      My interests sit between model development and the scientific systems around it:
+      data generation, simulation, evaluation and reproducible research software.
+    </p>
+    <SocialLinks />
+  </div>
+
+  <aside class="hero-aside" aria-label="Profile">
+    <div class="portrait-frame">
+      <img
+        class="profile-photo"
+        src="https://avatars.githubusercontent.com/u/30937913?v=4"
+        alt="Anthony Onwuli"
+        width="240"
+        height="240"
+      />
+    </div>
+    <div class="focus-list">
+      <span>Atomistic ML</span>
+      <span>Materials discovery</span>
+      <span>Scientific software</span>
+    </div>
+  </aside>
 </section>
 
-<section class="section">
-  <div class="section-title">
-    <p class="eyebrow">Selected outputs</p>
-    <h2>Recent Work</h2>
+<section class="section section--research">
+  <div class="section-heading">
+    <div>
+      <p class="section-index">01</p>
+      <p class="eyebrow">Selected research</p>
+    </div>
+    <div>
+      <h2>Recent work</h2>
+      <p>
+        Publications and research outputs spanning chemical representations,
+        generative materials design and high-throughput computational screening.
+      </p>
+    </div>
   </div>
-  <div class="card-grid">
+
+  <div class="card-grid research-grid">
     {#each recentWork as project}
       <ProjectCard {project} />
     {/each}
   </div>
+
+  <p class="section-link"><a href={resolve('/research')}>See research and publications →</a></p>
 </section>
 
-<section class="section">
-  <div class="section-title">
-    <p class="eyebrow">Scientific software</p>
-    <h2>Open Source</h2>
-    <p>Public research software for materials informatics and computational materials design.</p>
+<section class="section section--opensource">
+  <div class="section-heading">
+    <div>
+      <p class="section-index">02</p>
+      <p class="eyebrow">Open source</p>
+    </div>
+    <div>
+      <h2>Scientific software</h2>
+      <p>
+        Public tools I develop or contribute to for materials informatics,
+        chemical screening and computational materials design.
+      </p>
+    </div>
   </div>
-  <div class="card-grid">
+
+  <div class="opensource-grid">
     {#each projects as project}
       <ProjectCard {project} />
     {/each}
   </div>
-  <p class="section-link"><a href={resolve('/software')}>Explore software →</a></p>
-</section>
 
-<section class="section">
-  <div class="section-title">
-    <p class="eyebrow">Technical notebook</p>
-    <h2>Writing</h2>
-    <p>
-      I am building this into a public notebook for the parts of atomistic ML and computational
-      materials science that are useful beyond a single project.
-    </p>
-  </div>
-  <div class="topic-grid">
-    {#each writingTopics as topic}
-      <article class="topic">
-        <h3>{topic.title}</h3>
-        <p>{topic.description}</p>
-      </article>
-    {/each}
-  </div>
-  <p class="section-link"><a href={resolve('/writing')}>Writing and notes →</a></p>
+  <p class="section-link"><a href={resolve('/software')}>Explore open-source projects →</a></p>
 </section>
