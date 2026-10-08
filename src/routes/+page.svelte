@@ -1,8 +1,8 @@
 <script>
   import { asset, resolve } from '$app/paths';
-  import ProjectCard from '$lib/components/ProjectCard.svelte';
-  import SocialLinks from '$lib/components/SocialLinks.svelte';
-  import { projects, recentWork, writingTopics } from '$lib/data.js';
+  import ProjectCard from '#lib/components/ProjectCard.svelte';
+  import SocialLinks from '#lib/components/SocialLinks.svelte';
+  import { projects, recentWork, writingTopics } from '#lib/data.js';
 </script>
 
 <svelte:head>

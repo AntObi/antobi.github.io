@@ -1,5 +1,5 @@
 <script>
-  import { writingTopics } from '$lib/data.js';
+  import { writingTopics } from '#lib/data.js';
 </script>
 
 <svelte:head>

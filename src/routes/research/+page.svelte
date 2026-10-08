@@ -1,5 +1,5 @@
 <script>
-  import { publications, recentWork } from '$lib/data.js';
+  import { publications, recentWork } from '#lib/data.js';
   const researchWork = recentWork.filter((item) => item.kind.startsWith('Research') || item.kind.startsWith('Thesis'));
 </script>
 

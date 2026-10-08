@@ -1,5 +1,5 @@
 <script>
-  import { education, experience, projects } from '$lib/data.js';
+  import { education, experience, projects } from '#lib/data.js';
 </script>
 
 <svelte:head>

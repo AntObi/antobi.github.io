@@ -1,6 +1,8 @@
 <script>
   import '../app.css';
   import { resolve } from '$app/paths';
+
+  let { children } = $props();
 </script>
 
 <svelte:head>
@@ -31,7 +33,7 @@
 </header>
 
 <main>
-  <slot />
+  {@render children()}
 </main>
 
 <footer class="site-footer">

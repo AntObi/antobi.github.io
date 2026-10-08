@@ -1,6 +1,6 @@
 <script>
   import { resolve } from '$app/paths';
-  import { socials } from '$lib/data.js';
+  import { socials } from '#lib/data.js';
 
   const hrefFor = (href) => (href.startsWith('/') ? resolve(href) : href);
 </script>

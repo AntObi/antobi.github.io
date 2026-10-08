@@ -1,6 +1,6 @@
 <script>
-  import ProjectCard from '$lib/components/ProjectCard.svelte';
-  import { projects } from '$lib/data.js';
+  import ProjectCard from '#lib/components/ProjectCard.svelte';
+  import { projects } from '#lib/data.js';
 
   let query = $state('');
   let activeTag = $state('All');

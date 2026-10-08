@@ -44,6 +44,17 @@ No routing table is required.
 
 `src/routes/+layout.svelte` wraps every page. It owns the navigation, footer and global metadata.
 
+SvelteKit 3 layouts receive the nested page as a `children` snippet:
+
+```svelte
+<script>
+  let { children } = $props();
+</script>
+
+<nav>...</nav>
+{@render children()}
+```
+
 `src/routes/+layout.js` contains:
 
 ```js
@@ -52,8 +63,6 @@ export const trailingSlash = 'always';
 ```
 
 `prerender = true` tells SvelteKit that every route should be generated as static HTML at build time.
-
-That is why this site works well on GitHub Pages: there is no Node server in production.
 
 ## 4. Configuration in SvelteKit 3
 
@@ -70,15 +79,13 @@ sveltekit({
 })
 ```
 
-The adapter controls how the app is emitted for hosting. `adapter-static` writes ordinary static files.
-
 The dynamic `paths.base` value is what lets the same source build at the production root and under a PR-preview subdirectory.
 
 ## 5. Components
 
-Reusable UI lives in `src/lib/components/`.
+Reusable UI lives in `src/lib/components/`, imported through SvelteKit 3's `#lib` alias.
 
-For example, `ProjectCard.svelte` receives a JavaScript object:
+For example:
 
 ```svelte
 <script>
@@ -90,12 +97,6 @@ For example, `ProjectCard.svelte` receives a JavaScript object:
 ```
 
 `$props()` is Svelte 5's way of receiving component properties.
-
-A parent can then render:
-
-```svelte
-<ProjectCard project={project} />
-```
 
 ## 6. Reactive state
 
@@ -121,8 +122,6 @@ When the search box changes, Svelte updates only the affected project list.
 
 That prevents the same publication or project from being retyped in several pages.
 
-As the site grows, this can be split into YAML/JSON files or generated from APIs, but keeping it as plain JavaScript makes the first migration easy to understand.
-
 ## 8. Internal routes and static assets
 
 SvelteKit 3 provides helpers in `$app/paths`.
@@ -134,31 +133,19 @@ These helpers are why a PR preview under `/pr-preview/pr-2/` does not accidental
 
 ## 9. Build lifecycle
 
-Local development:
-
 ```bash
 npm run dev
-```
-
-Validation:
-
-```bash
 npm run check
-```
-
-Static production build:
-
-```bash
 npm run build
 ```
 
-The adapter writes the final site into `build/`.
+The static adapter writes the final site into `build/`.
 
 ## 10. Good next exercises
 
 1. Add a project to `src/lib/data.js`.
 2. Change `ProjectCard.svelte` and see every card update.
-3. Add a new route such as `src/routes/notes/+page.svelte`.
+3. Add a route such as `src/routes/notes/+page.svelte`.
 4. Add a reusable component.
 5. Move writing entries into Markdown.
 6. Add Pagefind-based global search.
