@@ -14,6 +14,14 @@
 
   <p class="card-description">{project.description}</p>
 
+  {#if project.contributions}
+    <div class="contribution-row" aria-label={`${project.name} contribution statistics`}>
+      {#each project.contributions as contribution}
+        <a class="contribution-stat" href={contribution.href}>{contribution.label}</a>
+      {/each}
+    </div>
+  {/if}
+
   {#if project.links}
     <div class="link-row">
       {#each project.links as link}
