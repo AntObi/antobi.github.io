@@ -132,6 +132,61 @@ export const upstreamContributions = [
       { label: '2 commits', href: 'https://github.com/metatensor/metatrain/commits/main/?author=AntObi' },
       { label: '2 PRs', href: 'https://github.com/metatensor/metatrain/pulls?q=is%3Apr+author%3AAntObi' }
     ]
+  },
+  {
+    name: 'pymlff',
+    href: 'https://github.com/utf/pymlff',
+    description: 'Lightweight tooling for reading and writing VASP ML_AB files and related atomistic data.',
+    contributions: [
+      { label: '6 commits', href: 'https://github.com/utf/pymlff/commits/main/?author=AntObi' },
+      { label: '2 merged PRs', href: 'https://github.com/utf/pymlff/pulls?q=is%3Apr+author%3AAntObi+is%3Amerged' }
+    ]
+  },
+  {
+    name: 'MatCalc',
+    href: 'https://github.com/materialyzeai/matcalc',
+    description: 'Materials-property calculations from interatomic potential energy surfaces.',
+    contributions: [
+      { label: '2 merged PRs', href: 'https://github.com/materialyzeai/matcalc/pulls?q=is%3Apr+author%3AAntObi+is%3Amerged' }
+    ]
+  },
+  {
+    name: 'extxyz',
+    href: 'https://github.com/libAtoms/extxyz',
+    description: 'Extended XYZ specification and parser implementation used across atomistic workflows.',
+    contributions: [
+      { label: '1 merged PR', href: 'https://github.com/libAtoms/extxyz/pulls?q=is%3Apr+author%3AAntObi+is%3Amerged' }
+    ]
+  }
+];
+
+export const packagingContributions = [
+  {
+    name: 'SMACT feedstock',
+    href: 'https://github.com/conda-forge/smact-feedstock',
+    description: 'Conda-forge packaging and release maintenance for SMACT.',
+    contributions: [
+      { label: '34 commits', href: 'https://github.com/conda-forge/smact-feedstock/commits/main/?author=AntObi' },
+      { label: '5 PRs', href: 'https://github.com/conda-forge/smact-feedstock/pulls?q=is%3Apr+author%3AAntObi' }
+    ]
+  },
+  {
+    name: 'ElementEmbeddings feedstock',
+    href: 'https://github.com/conda-forge/elementembeddings-feedstock',
+    description: 'Conda-forge packaging and maintenance for ElementEmbeddings.',
+    contributions: [
+      { label: '8 commits', href: 'https://github.com/conda-forge/elementembeddings-feedstock/commits/main/?author=AntObi' },
+      { label: '1 PR', href: 'https://github.com/conda-forge/elementembeddings-feedstock/pulls?q=is%3Apr+author%3AAntObi' }
+    ]
+  },
+  {
+    name: 'aviary-models feedstock',
+    href: 'https://github.com/conda-forge/aviary-models-feedstock',
+    description: 'Conda-forge packaging and maintainer setup for aviary-models.',
+    contributions: [
+      { label: '2 commits', href: 'https://github.com/conda-forge/aviary-models-feedstock/commits/main/?author=AntObi' },
+      { label: '1 PR', href: 'https://github.com/conda-forge/aviary-models-feedstock/pulls?q=is%3Apr+author%3AAntObi' }
+    ]
   }
 ];
 
