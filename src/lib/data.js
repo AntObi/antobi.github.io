@@ -19,6 +19,9 @@ export const projects = [
     contributions: [
       { label: '316 commits', href: 'https://github.com/WMD-group/SMACT/commits/master/?author=AntObi' },
       { label: '111 PRs', href: 'https://github.com/WMD-group/SMACT/pulls?q=is%3Apr+author%3AAntObi' }
+    ],
+    links: [
+      { label: 'JOSS paper', href: 'https://doi.org/10.21105/joss.11015' }
     ]
   },
   {
