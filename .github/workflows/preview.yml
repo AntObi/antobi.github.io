@@ -33,11 +33,14 @@ jobs:
       - name: Deploy or remove preview
         uses: rossjrw/pr-preview-action@v1
         with:
+          token: ${{ secrets.PAGES_TOKEN }}
+          git-config-name: AntObi
+          git-config-email: 30937913+AntObi@users.noreply.github.com
           source-dir: build
           preview-branch: gh-pages
           umbrella-dir: pr-preview
           action: auto
           comment: true
           qr-code: false
-          pages-base-url: https://antobi.github.io
+          pages-base-url: antobi.github.io
           wait-for-pages-deployment: false
