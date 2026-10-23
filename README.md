@@ -2,7 +2,7 @@
 
 Personal site for Anthony Onwuli.
 
-This version is built with **SvelteKit** and prerendered as a fully static site for GitHub Pages. The design takes inspiration from technical research sites such as janosh.dev while keeping the content and visual identity specific to Anthony's work in atomistic machine learning, materials discovery and scientific software.
+This site is built with **SvelteKit** and prerendered as a fully static site for GitHub Pages. Its content and visual identity focus on Anthony's work in atomistic machine learning, materials discovery and scientific software.
 
 ## Local development
 

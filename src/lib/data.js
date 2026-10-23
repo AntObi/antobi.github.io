@@ -1,6 +1,7 @@
 export const socials = [
   { label: 'GitHub', href: 'https://github.com/AntObi' },
   { label: 'ORCID', href: 'https://orcid.org/0000-0003-2107-153X' },
+  { label: 'Scholar', href: 'https://scholar.google.com/citations?user=6VZmdykAAAAJ&hl=en' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/anthony-on/' },
   { label: 'CV', href: '/cv/' },
   { label: 'Email', href: 'mailto:aonwuli@proton.me' }
@@ -18,6 +19,9 @@ export const projects = [
     contributions: [
       { label: '316 commits', href: 'https://github.com/WMD-group/SMACT/commits/master/?author=AntObi' },
       { label: '111 PRs', href: 'https://github.com/WMD-group/SMACT/pulls?q=is%3Apr+author%3AAntObi' }
+    ],
+    links: [
+      { label: 'JOSS paper', href: 'https://doi.org/10.21105/joss.11015' }
     ]
   },
   {
@@ -126,6 +130,25 @@ export const packagingContributions = [
 
 export const publications = [
   {
+    date: '2026-10-19',
+    year: 2026,
+    title: 'SMACT v4: Enhanced Screening and Prediction Tools for Computational Materials Design',
+    authors:
+      'Kinga O. Mastej, Anthony Onwuli, Alexander Moriarty, Daniel W. Davies, Ryan Nduma, Keith T. Butler, Jiwoo Lee, Masahiro Negishi, Panyalak Detrattanawichai, Alex M. Ganose, Hyunsoo Park, Rhys E. A. Goodall, Tianshu Li, Aron Walsh',
+    venue: 'Journal of Open Source Software 11(126), 11015',
+    type: 'Article',
+    href: 'https://doi.org/10.21105/joss.11015'
+  },
+  {
+    date: '2026-10-16',
+    year: 2026,
+    title: 'pymatgen: 15 years of community growth, new functionality, and future prospects',
+    authors: 'Janine George et al., including Anthony Onwuli',
+    venue: 'arXiv:2610.23538',
+    type: 'Preprint',
+    href: 'https://arxiv.org/abs/2610.23538'
+  },
+  {
     date: '2026-07-20',
     year: 2026,
     title: 'Chemical filters for ultra-high-throughput materials screening and generation',
@@ -213,25 +236,3 @@ export const education = [
   }
 ];
 
-export const writingTopics = [
-  {
-    title: 'Atomistic machine learning',
-    description:
-      'Notes on ML interatomic potentials, training data, evaluation, physical inductive biases and simulation workflows.'
-  },
-  {
-    title: 'Magnetic materials modelling',
-    description:
-      'Public technical notes on magnetic degrees of freedom, spin-conditioned atomistic models and magnetic simulation.'
-  },
-  {
-    title: 'Thermodynamics and phase diagrams',
-    description:
-      'Practical notes on SQS, cluster expansions, free energies, CALPHAD and connecting atomistic calculations to phase stability.'
-  },
-  {
-    title: 'Scientific ML engineering',
-    description:
-      'Reproducibility, high-throughput data generation, model interfaces, HPC workflows and research software design.'
-  }
-];

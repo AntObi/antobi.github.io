@@ -27,7 +27,6 @@ src/routes/
 ├── +page.svelte
 ├── research/+page.svelte
 ├── software/+page.svelte
-├── writing/+page.svelte
 └── cv/+page.svelte
 ```
 
@@ -147,6 +146,6 @@ The static adapter writes the final site into `build/`.
 2. Change `ProjectCard.svelte` and see every card update.
 3. Add a route such as `src/routes/notes/+page.svelte`.
 4. Add a reusable component.
-5. Move writing entries into Markdown.
-6. Add Pagefind-based global search.
+5. Add richer publication metadata or project visualisations.
+6. Add Pagefind-based global search if the site grows enough to need it.
 7. Add scientific visualisation components for structures, phase diagrams or embedding plots.
